@@ -6,7 +6,7 @@ const dogs = [
     { name: 'Elsie', id: 3, breed: 'australian shephard', img:"./images/australianshephard.jpeg"},
   ];
 
-function ListOfDogs({ flagDogList, onClick }){
+function ListOfDogs({onClick }){
     const dogListItems = dogs.map(dog =>
         <li key={dog.id}>
           <img className="dogIcon" src={dog.img}></img>

@@ -7,7 +7,7 @@ import ListOfDogs from '../components/ListOfDogs'
 
 function App() {
   let content;
-  let [flagDogList, setflagDogList] = useState(false);
+  let [flagDogList, setflagDogList] = useState(true);
 
   function handleClick() {
     console.log(flagDogList);
@@ -15,9 +15,9 @@ function App() {
   }
 
   if (flagDogList){
-    content = <DogBtn flagDogList={flagDogList} onClick={handleClick} />
+    content = <DogBtn onClick={handleClick} />
   }else{
-    content = <ListOfDogs flagDogList={flagDogList} onClick={handleClick} />
+    content = <ListOfDogs onClick={handleClick} />
   }
 
   return (

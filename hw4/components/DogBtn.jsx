@@ -1,6 +1,6 @@
 import './DogBtn.css'
 
-function DogBtn({ flagDogList, onClick }){
+function DogBtn({ onClick }){
     
     return (
       <div>
