@@ -1,4 +1,31 @@
 .dogIcon{
-    height:50px;
-    width: 50px;
+    height: 75px;
+    width: 75px;
+    border-radius: 5%;
+    border: solid;
+    border-color: #3A405A;
+  border-width: medium;
 }
+
+#dogList{
+    list-style-type: none;
+}
+
+li{
+    width: 260px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5%;
+    border-style: solid;
+  border-color: #3A405A;
+  border-width: medium;
+}
+
+li:hover{
+    background-color: aliceblue;
+}
+

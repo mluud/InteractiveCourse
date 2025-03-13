@@ -1,9 +1,9 @@
 import './ListOfDogs.css'
 
 const dogs = [
-    { name: 'Bella', id: 1, breed: 'dachsund', img:"https://animalcarecentersmyrna.com/wp-content/uploads/2021/08/Untitled-design-2021-08-19T162152.857.png"},
-    { name: 'Bessie', id: 2, breed: 'border collie', img:"https://animalcarecentersmyrna.com/wp-content/uploads/2021/08/Untitled-design-2021-08-19T162152.857.png"},
-    { name: 'Elsie', id: 3, breed: 'australian shephard', img:"https://animalcarecentersmyrna.com/wp-content/uploads/2021/08/Untitled-design-2021-08-19T162152.857.png"},
+    { name: 'Bella', id: 1, breed: 'dachsund', img:"./images/dachsund.png"},
+    { name: 'Bessie', id: 2, breed: 'border collie', img:"./images/bordercollie.jpeg"},
+    { name: 'Elsie', id: 3, breed: 'australian shephard', img:"./images/australianshephard.jpeg"},
   ];
 
 function ListOfDogs({ flagDogList, onClick }){
@@ -16,7 +16,7 @@ function ListOfDogs({ flagDogList, onClick }){
       
       return (
         <div>
-        <ul>{dogListItems}</ul>
+        <ul id="dogList">{dogListItems}</ul>
         <button  onClick={onClick}>I changed my mind...</button>  
         </div>
       );

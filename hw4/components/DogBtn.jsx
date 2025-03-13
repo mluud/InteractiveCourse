@@ -6,7 +6,7 @@ function DogBtn({ flagDogList, onClick }){
       <div>
         <button className='dogAdoptionButton' onClick={onClick}>
              Adopt a dog!<br></br>
-             <img src="./images/cutehappydog.webp" id="dogImg"></img>
+             <img src="./images/mainpagedogicon.jpeg" id="dogImg"></img>
         </button>
       </div>
     )
