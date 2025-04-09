@@ -43,9 +43,16 @@ function App() {
          <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
+      <CurrentMoveValue currentMove={currentMove}/>
       <ol>{moves}</ol>
       </div>
     </div>
+  )
+}
+
+function CurrentMoveValue({ currentMove }){ 
+  return (
+      <p  currentMove={currentMove}>Current Move : {currentMove}</p>
   )
 }
 
