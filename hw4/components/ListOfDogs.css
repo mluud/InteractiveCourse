@@ -11,12 +11,12 @@
     list-style-type: none;
 }
 
-li{
-    width: 260px;
-    height: 80px;
+.dogProfileBtn{
+    width: 360px;
+    height: 120px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+/*     flex-direction: row;
+    align-items: center; */
     padding: 5px;
     margin: 10px;
     border-radius: 5%;

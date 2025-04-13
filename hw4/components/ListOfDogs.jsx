@@ -8,16 +8,17 @@ const dogs = [
 
 function ListOfDogs({onClick }){
     const dogListItems = dogs.map(dog =>
+      <button className="dogProfileBtn" onClick={onClick}>
         <li key={dog.id}>
           <img className="dogIcon" src={dog.img}></img>
           My name is {dog.name} and my breed is {dog.breed}
         </li>
+      </button>
       );
       
       return (
         <div>
-        <ul id="dogList">{dogListItems}</ul>
-        <button  onClick={onClick}>I changed my mind...</button>  
+        <ul id="dogList">{dogListItems}</ul> 
         </div>
       );
   }
