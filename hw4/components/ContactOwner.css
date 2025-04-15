@@ -1,0 +1,26 @@
+#msgKennel{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+#contactKennel{
+    color:#3A405A;
+    font-weight: bold;
+}
+
+#nameInput{
+    border: solid;
+    border-color: #3A405A;
+  border-width: medium;
+  border-radius: 10px;
+}
+
+#msgInput{
+    border: solid;
+    border-color: #3A405A;
+  border-width: medium;
+  border-radius: 10px;
+}

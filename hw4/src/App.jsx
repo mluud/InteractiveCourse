@@ -54,7 +54,7 @@ function App() {
         break;
 
       case DOG_OWNER_MSG_PAGE:
-        content = <SendMsg onClick={dogOwnerMsgHandleClick} />
+        content = <SendMsg onClick={dogOwnerMsgHandleClicks} />
         break;
   
       default:
