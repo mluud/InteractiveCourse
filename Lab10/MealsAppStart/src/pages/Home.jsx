@@ -46,7 +46,7 @@ const Home = () => {
   
     return (
       <div className="store">
-        <Search onSearch={handleSearch} />            {/* ✅ CHANGED: added prop */}
+        <Search onSearch={handleSearch} />            
   
         <Favorites favoriteMeals={favoriteMeals} />
   
