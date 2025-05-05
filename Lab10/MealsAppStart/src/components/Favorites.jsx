@@ -1,5 +1,5 @@
 
-const Favorites = ({ favoriteMeals = [], removeFavorite }) => {
+const Favorites = ({ favoriteMeals = [], addToFavorite }) => {
 
 
   return (
@@ -13,7 +13,7 @@ const Favorites = ({ favoriteMeals = [], removeFavorite }) => {
               src={meal.strMealThumb} 
               alt={meal.strMeal}/>
             <span>{meal.strMeal}</span>
-            <button className="clear" onClick={() => removeFavorite(meal.idMeal)}>
+            <button className="clear" onClick={() => addToFavorite(meal.idMeal)}>
               <i className="fas fa-window-close"></i>
             </button>
           </li>

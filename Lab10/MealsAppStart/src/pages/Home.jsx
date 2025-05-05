@@ -16,8 +16,8 @@ const Home = () => {
 
   useEffect(() => {
     loadRandomMeal();
-    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    setFavorites(savedFavorites);
+/*     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites); */
   }, []);
 
 
