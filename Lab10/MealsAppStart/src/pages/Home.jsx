@@ -16,7 +16,10 @@ const Home = () => {
 
   useEffect(() => {
     loadRandomMeal();
-  },[])
+    const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    setFavorites(savedFavorites);
+  }, []);
+
 
   const loadRandomMeal = async () => {
     const resp = await fetch(RANDOM_API);
@@ -38,7 +41,7 @@ const Home = () => {
     try {
       const resp = await fetch(SEARCH_API + term);
       const data = await resp.json();
-      setSearchResults(data.meals || []); // Empty array if no results
+      setSearchResults(data.meals || []);
     } catch (error) {
       console.error("Search failed:", error);
     }};
