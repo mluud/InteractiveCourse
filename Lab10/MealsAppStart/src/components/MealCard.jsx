@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MealCard = ({mealData, isRandom = false}) => {
+const MealCard = ({mealData, onFavoriteClick , isRandom = false}) => {
   return (
     <div className="meal">
       <div className="meal-header">
@@ -9,7 +9,7 @@ const MealCard = ({mealData, isRandom = false}) => {
       </div>
       <div className="meal-body">
           <h3>{mealData.strMeal}</h3>
-          <button className="fav-btn">
+          <button className="fav-btn" onClick={onFavoriteClick}>
               <i className="fas fa-heart"></i>
           </button>
       </div>
@@ -18,3 +18,4 @@ const MealCard = ({mealData, isRandom = false}) => {
 }
 
 export default MealCard
+
