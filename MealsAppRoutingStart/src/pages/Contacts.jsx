@@ -1,6 +1,8 @@
+
+
 const Contacts = () => {
     return (
-      <div>gjghghgh
+      <div>content
       </div>
     );
   };

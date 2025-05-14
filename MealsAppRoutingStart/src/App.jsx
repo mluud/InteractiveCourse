@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Contacts from './pages/Contacts';
 import './App.css'
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,8 +16,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/meal/:id' element={<Meal/>} />
-        <Route path='*' element={<NotFound/>} />
-        <Route path='*' element={<Contacts/>} />
+        <Route path='/notfound' element={<NotFound/>} />
+        <Route path='/contacts' element={<Contacts/>} />
         <Route path='/admin' element={
             <ProtectedRoute>
               <Admin/>

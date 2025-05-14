@@ -2,7 +2,7 @@
 
 const NotFound = () => {
     return (
-      <div>gjghghgh
+      <div>content
       </div>
     );
   };
