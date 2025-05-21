@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -7,6 +8,11 @@ import ListOfDogs from '../components/ListOfDogs'
 import DogProfile from '../components/DogProfile'
 import ContactOwner from '../components/ContactOwner'
 import SendMsg from '../components/SendMsg'
+import Navbar from '..components/Navbar'
+import DogsToAdopt from '../pages/DogsToAdopt';
+import Kennels from '../pages/Kennels';
+import LogIn from '../pages/LogIn';
+import NotFound from '../pages/NotFound';
 
 const DOG_BTN_PAGE = 0
 const DOG_LIST_PAGE = 1
@@ -64,6 +70,14 @@ function App() {
 
   return (
     <div>
+        <Router>
+          <Routes>
+            <Route path="../pages/DogsToAdopt" element={<DogsToAdopt/>} />
+            <Route path="../pages/Kennels" element={<Kennels/>} />
+            <Route path="../pages/LogIn" element={<LogIn/>} />
+            <Route path="../pages/NotFound" element={<DogsToAdopt/>} />
+          </Routes>
+        </Router>
         <h1>woof</h1>
         <p>What do you want to do?</p>
         {content}
