@@ -1,0 +1,30 @@
+.favoritesSidebar {
+   /*  width: 250px; */
+    padding: 20px;
+  }
+  .favoritesSidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .favoritesSidebar img {
+    width: 100%;
+    height: 75px;
+    width: 75px;
+    border-radius: 5%;
+    border: solid;
+    border-color: #3A405A;
+    border-width: medium;
+  }
+
+  .favouriteDogs{
+    border: solid;
+    border-color: #3A405A;
+    border-width: medium;
+    border-radius: 15px;
+    width: 120px;
+    margin: 10px;
+    display:flex;
+flex-direction: column;
+background-color: #eaeaea;
+  }

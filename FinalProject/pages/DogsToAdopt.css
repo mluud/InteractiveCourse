@@ -1,0 +1,4 @@
+.dogsPageLayout{
+    display: flex;
+    flex-direction: row;
+}

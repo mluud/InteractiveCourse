@@ -1,0 +1,15 @@
+li {
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+li a {
+    color: #213547;
+}
+
+li a:hover{
+    color: #213547;
+}

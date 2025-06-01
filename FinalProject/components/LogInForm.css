@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    padding: 15px;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: #213547;
+    border: solid;
+}
+
+.submitBtn{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+}
+
+.submitBtn:hover{
+    background-color: #f0f0f0;
+}

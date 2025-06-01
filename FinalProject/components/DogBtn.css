@@ -1,0 +1,18 @@
+#dogImg{
+    height: 80px;
+    width: 100px;
+    border-radius: 5%;
+    margin-top: 5px;
+}
+
+button{
+    background-color: white;
+    border: solid;
+    border-color: #3A405A;
+  border-width: medium;
+  background-color: #ffffff;
+}
+
+button:hover{
+  background-color: #f0f0f0;
+}

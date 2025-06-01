@@ -1,0 +1,9 @@
+
+.listofKennels{
+    margin: 10px;
+    padding: 10px;
+}
+.kennelsList{
+    display:flex;
+    flex-direction: column;
+}
