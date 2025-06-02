@@ -5,7 +5,7 @@ import { useToggle } from 'usehooks-ts';
 
 function FavouritesSidebar() {
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
-  const [isVisible, toggleVisibility] = useToggle(true); // Sidebar is visible by default
+  const [isVisible, toggleVisibility] = useToggle(true);
 
   return (
     <div>

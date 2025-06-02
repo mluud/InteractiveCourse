@@ -15,14 +15,14 @@ function LogInForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert('Logging in');
-    setSubmitted(true); // Trigger the timeout
+    setSubmitted(true);
   };
 
   const showAlert = () => {
     alert('You have been logged out.');
   };
 
-  useTimeout(showAlert, submitted ? 120000 : null); // 2 minutes = 120000 ms
+  useTimeout(showAlert, submitted ? 120000 : null);
 
   return (
     <div>
