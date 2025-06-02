@@ -2,3 +2,23 @@
     display: flex;
     flex-direction: row;
 }
+
+.dogSearchBar{
+    border: solid;
+    border-color: #3A405A;
+    border-width: medium;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    height: 50px;
+    width: 100%;
+  }
+  
+  .searchInput{
+    border: none;
+    max-width: 500px;
+  }
+  
+  .searchIcon{
+    border: none;
+  }

@@ -15,6 +15,8 @@ import LogIn from '../pages/LogIn';
 import NotFound from '../pages/NotFound'; 
 import Home from '../pages/Home'; 
 import { FavoritesProvider } from './FavoritesContext';
+import KennelCard from '../components/KennelCard';
+
 
 
 /* const DOG_BTN_PAGE = 0
@@ -79,7 +81,10 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>} />
               <Route path="/dogs-to-adopt" element={<DogsToAdopt />} />
-              <Route path="/kennels" element={<Kennels />} />
+              <Route path="/kennels" element={<Kennels />}>
+                <Route path="card" element={<KennelCard />} />
+                <Route path="contact" element={<ContactOwner />} />
+              </Route>
               <Route path="/login" element={<LogIn />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

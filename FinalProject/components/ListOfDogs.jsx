@@ -2,9 +2,10 @@ import React, { useState, useEffect, useContext } from 'react';
 import './ListOfDogs.css';
 import { FavoritesContext } from '../src/FavoritesContext';
 
-function ListOfDogs({ onClick }) {
+function ListOfDogs({ searchTerm }) {
   const [dogs, setDogs] = useState([]);
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
+  const dogApiUrl = import.meta.env.VITE_DOG_API_URL;
 
   useEffect(() => {
     const dogNames = [
@@ -13,7 +14,7 @@ function ListOfDogs({ onClick }) {
       'Duke', 'Lily', 'Jack', 'Sophie', 'Oliver', 'Zoe', 'Bentley'
     ];
 
-    fetch('https://dog.ceo/api/breeds/list/all')
+    fetch(dogApiUrl)
       .then((res) => res.json())
       .then((data) => {
         const breeds = Object.keys(data.message);
@@ -45,12 +46,17 @@ function ListOfDogs({ onClick }) {
       });
   }, []);
 
+  const filteredDogs = dogs.filter((dog) =>
+    dog.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    dog.breed.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <ul id="dogList">
-        {dogs.map((dog) => (
+        {filteredDogs.map((dog) => (
           <li key={dog.id}>
-            <button className="dogProfileBtn" onClick={onClick}>
+            <button className="dogProfileBtn">
               <img className="dogIcon" src={dog.img} alt={dog.breed} />
               <p>{dog.name}</p>
               <p>{dog.breed}</p>

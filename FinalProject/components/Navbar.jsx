@@ -23,8 +23,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-/*   <Route path="../pages/DogsToAdopt" element={<DogsToAdopt/>} />
-            <Route path="../pages/Kennels" element={<Kennels/>} />
-            <Route path="../pages/LogIn" element={<LogIn/>} />
-            <Route path="../pages/NotFound" element={<DogsToAdopt/>} /> */

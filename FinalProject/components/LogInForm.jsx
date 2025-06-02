@@ -1,46 +1,57 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import './LogInForm.css'
+import './LogInForm.css';
+import { useTimeout } from 'usehooks-ts';
 
-function LogInForm(){
-    const [inputs, setInputs] = useState({});
+function LogInForm() {
+  const [inputs, setInputs] = useState({});
+  const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (event) => {
-      const name = event.target.name;
-      const value = event.target.value;
-      setInputs(values => ({...values, [name]: value}))
-    }
-  
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      alert("Logging in");
-  }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInputs((values) => ({ ...values, [name]: value }));
+  };
 
-    return (
-      <div>
-        <form onSubmit={handleSubmit}>
-      <label>Username:
-      <input 
-        type="text" 
-        name="username" 
-        value={inputs.username || ""} 
-        onChange={handleChange}
-      />
-      </label>
-      <label>Password:
-        <input 
-          type="text" 
-          name="pw" 
-          value={inputs.pw || ""} 
-          onChange={handleChange}
-        />
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert('Logging in');
+    setSubmitted(true); // Trigger the timeout
+  };
+
+  const showAlert = () => {
+    alert('You have been logged out.');
+  };
+
+  useTimeout(showAlert, submitted ? 120000 : null); // 2 minutes = 120000 ms
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Username:
+          <input
+            type="text"
+            name="username"
+            value={inputs.username || ''}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            type="password"
+            name="pw"
+            value={inputs.pw || ''}
+            onChange={handleChange}
+          />
         </label>
         <input type="submit" className="submitBtn" />
-    </form>
-      </div>
-    )}
-  
-    export default LogInForm
+      </form>
+    </div>
+  );
+}
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<LogInForm />);
+export default LogInForm;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<LogInForm />);

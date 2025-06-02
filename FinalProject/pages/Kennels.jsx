@@ -1,15 +1,22 @@
 import KennelCard from "../components/KennelCard";
+import { Outlet, Link } from 'react-router-dom';
 
 function Kennels(){
    
     return (
       <div>
-      <h1>List of Kennels</h1>
-      <KennelCard />
-      <div className="viewMoreKennels">
-        <p>Additional details on Estonian kennels</p>
-        <a href="https://kennelliit.ee/meist/kennelid/">HERE</a>
-      </div>
+      <h1>Kennels</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="card">View the list of Kennels</Link>
+            </li>
+            <li>
+              <Link to="contact">Contact a Kennel</Link>
+            </li>
+          </ul>
+        </nav>
+        <Outlet />
       </div>
     );
 }
